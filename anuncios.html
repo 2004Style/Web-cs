@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ConvertSystems</title>
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Share+Tech+Mono'><link rel="stylesheet" href="./reloj/reloj.css">
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="home.html">ConvertSystems</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            
+            <!-- donde estaba el boton de login-->
+            
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+
+                            <div class="sb-sidenav-menu-heading">Comunidad</div>
+
+                            <a class="nav-link" href="home.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-home-alt"></i></div>
+                                Inicio
+                            </a>
+
+                            <a class="nav-link" href="anuncios.html">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-bell"></i></i></div>
+                                Anuncios
+                            </a>
+
+
+                            <div class="sb-sidenav-menu-heading">Proyectos</div>
+
+
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-download"></i></div>
+                                Descargas
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="webs.html">
+                                        <div class="sb-nav-link-icon"><i class="fa-solid fa-cloud"></i></div>
+                                        Paginas web
+                                    </a>
+                                    
+                                    <a class="nav-link" href="bots.html">
+                                        <div class="sb-nav-link-icon"><i class="fa-solid fa-robot"></i></div>
+                                        Bots Para Discord
+                                    </a>
+        
+                                    <a class="nav-link" href="escritorios.html">
+                                        <div class="sb-nav-link-icon"><i class="fa-solid fa-desktop"></i></div>
+                                        Aplicaciones De Escritorio
+                                    </a>
+                                </nav>
+                            </div>
+
+                            
+
+                            <div class="sb-sidenav-menu-heading">Redes</div>
+
+
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-address-book"></i></div>
+                                Contactanos
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+
+                                    <a class="nav-link" href="https://www.facebook.com/tu_pagina_de_facebook" target="_blank">
+                                        <div class="sb-nav-link-icon"><i class="fa-brands fa-facebook"></i></div>
+                                        Faceboock
+                                    </a>
+        
+                                    <a class="nav-link" href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+                                        <div class="sb-nav-link-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                                        Whatsapp
+                                    </a>
+        
+                                    <a class="nav-link" href="https://www.instagram.com/" target="_blank">
+                                        <div class="sb-nav-link-icon"><i class="fa-brands fa-instagram"></i></div>
+                                        Instagram
+                                    </a>
+
+                                    <a class="nav-link" href="https://discord.com/" target="_blank">
+                                        <div class="sb-nav-link-icon"><i class="fa-brands fa-discord"></i></div>
+                                        Discord
+                                    </a>
+
+                                    <a class="nav-link" href="https://www.tiktok.com/es/" target="_blank">
+                                        <div class="sb-nav-link-icon"><i class="fa-brands fa-tiktok"></i></div>
+                                        Tik Tok
+                                    </a>
+
+                                    <a class="nav-link" href="https://web.telegram.org/a/" target="_blank">
+                                        <div class="sb-nav-link-icon"><i class="fa-brands fa-telegram"></i></div>
+                                        Telegram
+                                    </a>
+                                </nav>
+                            </div>
+
+
+                            
+
+                            
+                        </div>
+                    </div>
+
+                    
+                    <div class="contenedoreloj">
+
+                        <div id="clock">
+                            <p class="date">{{ date }}</p>
+                            <p class="time">{{ time }}</p>
+                        </div>
+
+                    </div>
+
+                    <div class="sb-sidenav-footer">
+                        <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+
+
+
+
+                <!-- aca va el codigo que deseas modificar para el contenido que esta relacionado con lo que deseas mostrar mejor dicho este es el espacio para que coloques el diseño de tu pagina el resto es el diseño del menu-->
+                <div class="contenedoranuncios">
+                    <div class="titulopag neons">
+                        <h2 class="neon">Anuncios</h2>
+                    </div>
+
+                    <div class="subcontenedoresanuncios">
+                        
+                        <div class="cabecera">
+                            
+                            <img class="logo" src="https://www.eltiempo.com/files/image_1200_680/uploads/2019/12/07/5dec47012d257.jpeg" alt="">
+                            
+                            <h2 class="titulo">
+                                Sistema De Ventas
+                                <div class="dflexjustifycontentcentersmalltextwarning">
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+
+
+                                    <a class="textbtndesc" href="#">ir a descargar</a>
+
+                                </div>
+                            </h2>
+                        </div>
+
+                        <div class="lineadiv"></div>
+
+                        <div class="cuerpo">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                        
+                            <div class="galeria">
+
+                            </div>
+                            <!-- Estructura HTML con el contenedor del video -->
+                            <div class="videoyt">
+                                <video src="https://www.youtube.com/watch?v=h1LVxwNEqo0&t=5s" controls></video>
+                            </div>
+                        </div>
+
+                        <div class="final">
+
+                        </div>
+                        
+                    </div>
+
+
+
+
+
+                    
+                    <div class="subcontenedoresanuncios">
+                        
+                        <div class="cabecera">
+                            
+                            <img class="logo" src="https://www.eltiempo.com/files/image_1200_680/uploads/2019/12/07/5dec47012d257.jpeg" alt="">
+                            
+                            <h2 class="titulo">
+                                Sistema De Ventas
+                                <div class="dflexjustifycontentcentersmalltextwarning">
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+
+
+                                    <a class="textbtndesc" href="#">ir a descargar</a>
+
+                                </div>
+                            </h2>
+                        </div>
+
+                        <div class="lineadiv"></div>
+
+                        <div class="cuerpo">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                        
+                            <div class="galeria">
+
+                            </div>
+                            <!-- Estructura HTML con el contenedor del video -->
+                            <div class="videoyt">
+                                <video src="https://www.youtube.com/watch?v=h1LVxwNEqo0&t=5s" controls></video>
+                            </div>
+                        </div>
+
+                        <div class="final">
+
+                        </div>
+                        
+                    </div>
+                    <div class="subcontenedoresanuncios">
+                        
+                        <div class="cabecera">
+                            
+                            <img class="logo" src="https://www.eltiempo.com/files/image_1200_680/uploads/2019/12/07/5dec47012d257.jpeg" alt="">
+                            
+                            <h2 class="titulo">
+                                Sistema De Ventas
+                                <div class="dflexjustifycontentcentersmalltextwarning">
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+
+
+                                    <a class="textbtndesc" href="#">ir a descargar</a>
+
+                                </div>
+                            </h2>
+                        </div>
+
+                        <div class="lineadiv"></div>
+
+                        <div class="cuerpo">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                        
+                            <div class="galeria">
+
+                            </div>
+                            <!-- Estructura HTML con el contenedor del video -->
+                            <div class="videoyt">
+                                <video src="https://www.youtube.com/watch?v=h1LVxwNEqo0&t=5s" controls></video>
+                            </div>
+                        </div>
+
+                        <div class="final">
+
+                        </div>
+                        
+                    </div>
+                    <div class="subcontenedoresanuncios">
+                        
+                        <div class="cabecera">
+                            
+                            <img class="logo" src="https://www.eltiempo.com/files/image_1200_680/uploads/2019/12/07/5dec47012d257.jpeg" alt="">
+                            
+                            <h2 class="titulo">
+                                Sistema De Ventas
+                                <div class="dflexjustifycontentcentersmalltextwarning">
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+
+
+                                    <a class="textbtndesc" href="#">ir a descargar</a>
+
+                                </div>
+                            </h2>
+                        </div>
+
+                        <div class="lineadiv"></div>
+
+                        <div class="cuerpo">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                        
+                            <div class="galeria">
+
+                            </div>
+                            <!-- Estructura HTML con el contenedor del video -->
+                            <div class="videoyt">
+                                <video src="https://www.youtube.com/watch?v=h1LVxwNEqo0&t=5s" controls></video>
+                            </div>
+                        </div>
+
+                        <div class="final">
+
+                        </div>
+                        
+                    </div>
+                    <div class="subcontenedoresanuncios">
+                        
+                        <div class="cabecera">
+                            
+                            <img class="logo" src="https://www.eltiempo.com/files/image_1200_680/uploads/2019/12/07/5dec47012d257.jpeg" alt="">
+                            
+                            <h2 class="titulo">
+                                Sistema De Ventas
+                                <div class="dflexjustifycontentcentersmalltextwarning">
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+
+
+                                    <a class="textbtndesc" href="#">ir a descargar</a>
+
+                                </div>
+                            </h2>
+                        </div>
+
+                        <div class="lineadiv"></div>
+
+                        <div class="cuerpo">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                        
+                            <div class="galeria">
+
+                            </div>
+                            <!-- Estructura HTML con el contenedor del video -->
+                            <div class="videoyt">
+                                <video src="https://www.youtube.com/watch?v=h1LVxwNEqo0&t=5s" controls></video>
+                            </div>
+                        </div>
+
+                        <div class="final">
+
+                        </div>
+                        
+                    </div>
+                    <div class="subcontenedoresanuncios">
+                        
+                        <div class="cabecera">
+                            
+                            <img class="logo" src="https://www.eltiempo.com/files/image_1200_680/uploads/2019/12/07/5dec47012d257.jpeg" alt="">
+                            
+                            <h2 class="titulo">
+                                Sistema De Ventas
+                                <div class="dflexjustifycontentcentersmalltextwarning">
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+
+
+                                    <a class="textbtndesc" href="#">ir a descargar</a>
+
+                                </div>
+                            </h2>
+                        </div>
+
+                        <div class="lineadiv"></div>
+
+                        <div class="cuerpo">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                        
+                            <div class="galeria">
+
+                            </div>
+                            <!-- Estructura HTML con el contenedor del video -->
+                            <div class="videoyt">
+                                <video src="https://www.youtube.com/watch?v=h1LVxwNEqo0&t=5s" controls></video>
+                            </div>
+                        </div>
+
+                        <div class="final">
+
+                        </div>
+                        
+                    </div>
+                    <div class="subcontenedoresanuncios">
+                        
+                        <div class="cabecera">
+                            
+                            <img class="logo" src="https://www.eltiempo.com/files/image_1200_680/uploads/2019/12/07/5dec47012d257.jpeg" alt="">
+                            
+                            <h2 class="titulo">
+                                Sistema De Ventas
+                                <div class="dflexjustifycontentcentersmalltextwarning">
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+
+
+                                    <a class="textbtndesc" href="#">ir a descargar</a>
+
+                                </div>
+                            </h2>
+                        </div>
+
+                        <div class="lineadiv"></div>
+
+                        <div class="cuerpo">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                        
+                            <div class="galeria">
+
+                            </div>
+                            <!-- Estructura HTML con el contenedor del video -->
+                            <div class="videoyt">
+                                <video src="https://www.youtube.com/watch?v=h1LVxwNEqo0&t=5s" controls></video>
+                            </div>
+                        </div>
+
+                        <div class="final">
+
+                        </div>
+                        
+                    </div>
+                    <div class="subcontenedoresanuncios">
+                        
+                        <div class="cabecera">
+                            
+                            <img class="logo" src="https://www.eltiempo.com/files/image_1200_680/uploads/2019/12/07/5dec47012d257.jpeg" alt="">
+                            
+                            <h2 class="titulo">
+                                Sistema De Ventas
+                                <div class="dflexjustifycontentcentersmalltextwarning">
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+
+
+                                    <a class="textbtndesc" href="#">ir a descargar</a>
+
+                                </div>
+                            </h2>
+                        </div>
+
+                        <div class="lineadiv"></div>
+
+                        <div class="cuerpo">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                        
+                            <div class="galeria">
+
+                            </div>
+                            <!-- Estructura HTML con el contenedor del video -->
+                            <div class="videoyt">
+                                <video src="https://www.youtube.com/watch?v=h1LVxwNEqo0&t=5s" controls></video>
+                            </div>
+                        </div>
+
+                        <div class="final">
+
+                        </div>
+                        
+                    </div>
+                    <div class="subcontenedoresanuncios">
+                        
+                        <div class="cabecera">
+                            
+                            <img class="logo" src="https://www.eltiempo.com/files/image_1200_680/uploads/2019/12/07/5dec47012d257.jpeg" alt="">
+                            
+                            <h2 class="titulo">
+                                Sistema De Ventas
+                                <div class="dflexjustifycontentcentersmalltextwarning">
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+
+
+                                    <a class="textbtndesc" href="#">ir a descargar</a>
+
+                                </div>
+                            </h2>
+                        </div>
+
+                        <div class="lineadiv"></div>
+
+                        <div class="cuerpo">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                        
+                            <div class="galeria">
+
+                            </div>
+                            <!-- Estructura HTML con el contenedor del video -->
+                            <div class="videoyt">
+                                <video src="https://www.youtube.com/watch?v=h1LVxwNEqo0&t=5s" controls></video>
+                            </div>
+                        </div>
+
+                        <div class="final">
+
+                        </div>
+                        
+                    </div>
+                    <div class="subcontenedoresanuncios">
+                        
+                        <div class="cabecera">
+                            
+                            <img class="logo" src="https://www.eltiempo.com/files/image_1200_680/uploads/2019/12/07/5dec47012d257.jpeg" alt="">
+                            
+                            <h2 class="titulo">
+                                Sistema De Ventas
+                                <div class="dflexjustifycontentcentersmalltextwarning">
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+
+
+                                    <a class="textbtndesc" href="#">ir a descargar</a>
+
+                                </div>
+                            </h2>
+                        </div>
+
+                        <div class="lineadiv"></div>
+
+                        <div class="cuerpo">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sint! Cum quaerat enim, illo maxime rerum ipsum distinctio amet ex atque minima et odit facere error corporis ipsam quibusdam similique?</p>
+                        
+                            <div class="galeria">
+
+                            </div>
+                            <!-- Estructura HTML con el contenedor del video -->
+                            <div class="videoyt">
+                                <video src="https://www.youtube.com/watch?v=h1LVxwNEqo0&t=5s" controls></video>
+                            </div>
+                        </div>
+
+                        <div class="final">
+
+                        </div>
+                        
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script><script  src="./js/reloj.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
