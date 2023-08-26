@@ -52,7 +52,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-bg: #1a1c20;
   --bs-border-width: 1px;
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
@@ -11625,16 +11625,11 @@ to {
   font-size: 15px;
 }
 
-.videoyt {
+.videoyt{
   display: flex;
   align-items: center;
-}
-
-.videoyt video {
-  padding-top: 30px;
-  padding-left: 20%;
-  padding-right: 20%;
+  justify-content: center;
   width: 100%;
-  vertical-align: top;
+  height: 100%;
 }
 
