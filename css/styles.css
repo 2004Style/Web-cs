@@ -11534,7 +11534,8 @@ to {
   font-size: 8vh;
 }
 .informacion{
-  padding: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 .subcontenedoresanuncios{
   padding: 40px 40px 0px 40px;
