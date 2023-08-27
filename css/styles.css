@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
 :root {
+  --colordelreloj--:#00fc37;
+  --colordecarta--: #0098be;
+  --colodecartamasobscuro--: #005f77;
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -434,14 +437,7 @@ legend + * {
   -webkit-appearance: textfield;
 }
 
-/* rtl:raw:
-[type="tel"],
-[type="url"],
-[type="email"],
-[type="number"] {
-  direction: ltr;
-}
-*/
+
 ::-webkit-search-decoration {
   -webkit-appearance: none;
 }
@@ -11302,7 +11298,7 @@ p {
   font-family: 'Share Tech Mono', monospace;
   left: 50%;
   top: 50%;
-  color: #00ff37;
+  color: var(--colordelreloj--);
   text-shadow: 0 0 20px rgb(1, 247, 173),  0 0 20px rgba(10, 230, 193, 0.014);
   .time {
       letter-spacing: 0.05em;
@@ -11320,10 +11316,6 @@ p {
   }
 }
 /*descargas*/
-/* Definir una variable para el color azul */
-:root {
-  --color-fondo-card: #008dce;
-}
 
 /*diseños para el titulo de la pagina*/
 .titulopag {
@@ -11391,8 +11383,8 @@ to {
 .cards {
   margin-top: 50px;
   margin-right: 50px;
-  border: 2px solid var(--color-fondo-card);
-  background: var(--color-fondo-card);
+  border: 2px solid var(--colordecarta--);
+  background: var(--colordecarta--);
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding-bottom: 20px;
@@ -11526,6 +11518,7 @@ to {
   background: #1a1c20;
   height: 100%;
   color: #fff;
+  padding-bottom: 50px;
 }
 
 .titulogeneral{
@@ -11558,7 +11551,7 @@ to {
 .logo{
   height: 100px;
   width: 100px;
-  border: 2px solid #01a58a;
+  border: 2px solid var(--colordecarta--);
   border-radius: 25px;
 }
 .titulo{
@@ -11577,19 +11570,19 @@ to {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #01a58a;
+  background: var(--colordecarta--);
   font-weight: bold;
   font-size: 12px;
   text-decoration: none;
-  color: #fff;
+  color: #000000;
 }
 .textbtndesc:hover{
   font-weight: bold;
   color: #fff;
-  background: rgb(0, 135, 224);
+  background: var(--colodecartamasobscuro--);
 }
 .lineadiv{
-  background: #01a58a;
+  background: var(--colordecarta--);
   height: 1px;
 }
 .cuerpo{
@@ -11607,4 +11600,173 @@ to {
   height: 100%;
   margin-bottom: 20px;
 }
+.final{
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+}
+/*LOGO DENTRO DE LOS ANUNCIOS PARA LOS LINKS*/
 
+.cardPRODUCT {
+  position: relative;
+  height: 300px;
+  width: 230px;
+}
+
+.cardPRODUCT .boxshadowPRODUCT {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 1px solid var(--colordecarta--);
+  transform: scale(0.8);
+  box-shadow: var(--colordecarta--) 0px 30px 70px 0px;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.cardPRODUCT .mainPRODUCT {
+  width: 230px;
+  height: 300px;
+  overflow: hidden;
+  background: var(--colordecarta--);
+  background: linear-gradient(
+    0deg,
+    var(--colodecartamasobscuro--) 0%,
+    var(--colordecarta--) 60%,
+    var(--colodecartamasobscuro--) 100%
+  );
+  position: relative;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 40px,
+    100% calc(100% - 40px),
+    calc(100% - 40px) 100%,
+    40px 100%,
+    0 calc(100% - 40px)
+  );
+  box-shadow: var(--colordecarta--) 0px 7px 29px 0px;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.cardPRODUCT .mainPRODUCT .topPRODUCT {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  z-index: 2;
+  border-top: 115px solid black;
+  border-left: 115px solid transparent;
+  border-right: 115px solid transparent;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.cardPRODUCT .mainPRODUCT .sidePRODUCT {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transform: translateX(-50%);
+  height: 101%;
+  background: black;
+  clip-path: polygon(0% 0%, 50% 0, 95% 45%, 100% 100%, 0% 100%);
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
+}
+
+.cardPRODUCT .mainPRODUCT .leftPRODUCT {
+  left: 0;
+}
+
+.cardPRODUCT .mainPRODUCT .rightPRODUCT {
+  right: 0;
+  transform: translateX(50%) scale(-1, 1);
+}
+
+.cardPRODUCT .mainPRODUCT .titlePRODUCT {
+  color: #000000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 90px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 12px;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.2s ease-out 0s;
+}
+
+.cardPRODUCT .mainPRODUCT .button-containerPRODUCT {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cardPRODUCT .mainPRODUCT .button-containerPRODUCT .buttonPRODUCT {
+  position: absolute;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  clip-path: polygon(0 0, 100% 0, 81% 100%, 21% 100%);
+  background: black;
+  border: none;
+  display: grid;
+  place-content: center;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.cardPRODUCT .mainPRODUCT .button-containerPRODUCT .buttonPRODUCT {
+  padding: 7px 12px;
+  transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.cardPRODUCT .mainPRODUCT .button-containerPRODUCT .buttonPRODUCT:nth-child(1) {
+  bottom: 300px;
+  transition-delay: 0.4s;
+}
+.cardPRODUCT .mainPRODUCT .button-containerPRODUCT .buttonPRODUCT:nth-child(2) {
+  bottom: 300px;
+  transition-delay: 0.6s;
+}
+.cardPRODUCT .mainPRODUCT .button-containerPRODUCT .buttonPRODUCT:nth-child(3) {
+  bottom: 300px;
+  transition-delay: 0.8s;
+}
+.cardPRODUCT:hover .mainPRODUCT {
+  transform: scale(1.1);
+}
+
+.cardPRODUCT:hover .mainPRODUCT .topPRODUCT {
+  top: -50px;
+}
+
+.cardPRODUCT:hover .mainPRODUCT .leftPRODUCT {
+  left: -50px;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+}
+
+.cardPRODUCT:hover .mainPRODUCT .rightPRODUCT {
+  right: -50px;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+}
+
+.cardPRODUCT:hover .mainPRODUCT .titlePRODUCT {
+  opacity: 1;
+  transition: all 0.2s ease-out 1.3s;
+}
+
+.cardPRODUCT:hover .mainPRODUCT .button-containerPRODUCT :nth-child(1) {
+  bottom: 80px;
+  transition-delay: 0.8s;
+}
+
+.cardPRODUCT:hover .mainPRODUCT .button-containerPRODUCT :nth-child(2) {
+  bottom: 40px;
+  transition-delay: 0.6s;
+}
+
+.cardPRODUCT:hover .mainPRODUCT .button-containerPRODUCT :nth-child(3) {
+  bottom: 0;
+  transition-delay: 0.4s;
+}
+.icono-usuarioPRODUCT {
+  font-size: 15px; /* Tamaño deseado en píxeles */
+  color: var(--colordecarta--); /* Color deseado */
+}

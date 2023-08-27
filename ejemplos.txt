@@ -59,13 +59,35 @@ este es el codigo para un nuevo anuncio de los productos
                             </div>
                             <!-- Estructura HTML con el contenedor del video -->
                             <div class="videoyt">
+                                <!--
                                 <iframe src="https://www.tiktok.com/embed/v2/6960715389072362758" width="320" height="688" frameborder="0" loading="lazy" allowfullscreen></iframe>
-
+                                -->
                             </div>
                         </div>
 
                         <div class="final">
-
+                            <div class="cardPRODUCT">
+                                <div class="boxshadowPRODUCT"></div>
+                                <div class="mainPRODUCT">
+                                    <div class="topPRODUCT"></div>
+                                    <div class="leftPRODUCT sidePRODUCT"></div>
+                                    <div class="rightPRODUCT sidePRODUCT"></div>
+                                    <div class="titlePRODUCT">PUEDES VER EL CONTENIDO EN LAS SIGUIETES REDES</div>
+                                    <div class="button-containerPRODUCT">
+                                        <a href="URL_DESTINO" target="_blank" class="buttonPRODUCT">
+                                            <i class="fa-brands fa-instagram icono-usuarioPRODUCT"></i>
+                                        </a>
+                            
+                                        <a href="URL_DESTINO" target="_blank" class="buttonPRODUCT">
+                                            <i class="fa-brands fa-tiktok icono-usuarioPRODUCT"></i>
+                                        </a>
+                                        
+                                        <a href="URL_DESTINO" target="_blank" class="buttonPRODUCT">
+                                            <i class="fa-brands fa-github icono-usuarioPRODUCT"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         
                     </div>
