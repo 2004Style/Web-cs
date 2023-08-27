@@ -1,0 +1,71 @@
+este es el codigo para crear las tarjetas donde van los productos
+
+<div id="iddelapublicacion" class="cards">
+                        <!-- Sale badge-->
+                        <div class="badgebgdarktextwhitepositionabsolute">New</div>
+                        <!-- imagen-->
+                        <img class="cardimg" src="https://cdn.discordapp.com/attachments/1144842385604489286/1144848920917332079/Untitled_Project.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="cardbody">
+                            <div class="textcenter">
+                                <!-- Product name-->
+                                <h5 class="fwbolder">Bot Basico</h5>
+                                <!-- Product reviews-->
+                                <div class="dflexjustifycontentcentersmalltextwarning">
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                </div>
+                                <!-- Product price-->
+                                <div class="containertexto">si deseas mas informacion puedes usar la opcion ver mas <a class="anclas" href="anuncios.html#botbasicodc">ver mas</a></div>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="cardfooter">
+                            <div class="textcenter"><a class="btns" href="aca va la direccion de donde esta el producto en los archivos">Descargar</a></div>
+                        </div>
+                    </div>
+
+este es el codigo para un nuevo anuncio de los productos
+
+<div id="iddelapublicacion" class="subcontenedoresanuncios">
+                        
+                        <div class="cabecera">
+                            
+                            <img class="logo" src="https://cdn.discordapp.com/attachments/1144842385604489286/1144849384245309490/Picsart_23-08-11_10-55-11-884.jpg" alt="">
+                            
+                            <h2 class="titulo">Bot Basico
+                                <div class="dflexjustifycontentcentersmalltextwarning">
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+                                    <div class="bistarfill"></div>
+
+
+                                    <a class="textbtndesc" href="direccion donde esta el producto mas el #direcion del iddelproducto">ir a descargar</a>
+
+                                </div>
+                            </h2>
+                        </div>
+
+                        <div class="lineadiv"></div>
+
+                        <div class="cuerpo">
+                            <p>Este es un sistema de conversiones hecho en C# usando formularios. el sistema cuenta con conversiones de decimal a binario, octal, hexadecimal fue elaborado con la intencion de facilitar la conversion de datos para los usuarios que no dominan lo que son conversiones de sistemas numericos.</p>
+                        
+                            <div class="galeria">
+
+                            </div>
+                            <!-- Estructura HTML con el contenedor del video -->
+                            <div class="videoyt">
+                                <iframe src="https://www.tiktok.com/embed/v2/6960715389072362758" width="320" height="688" frameborder="0" loading="lazy" allowfullscreen></iframe>
+
+                            </div>
+                        </div>
+
+                        <div class="final">
+
+                        </div>
+                        
+                    </div>
