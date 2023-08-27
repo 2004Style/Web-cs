@@ -11233,7 +11233,6 @@ body {
 }
 
 /* Estilos para Particles.js */
-
 .particles-container {
   position: relative;
   height: 100%;
@@ -11262,12 +11261,7 @@ body {
   text-align: center;
 }
 
-
-
-
-
 /* Estilos para escritura*/
-
 .loader {
   font-size: 2vw; /* Ajusta el tamaño del texto */
   letter-spacing: 0.2em; /* Ajusta la distancia entre las letras */
@@ -11290,11 +11284,6 @@ body {
 .contenedortexanimado{
 height: 0px;
 }
-
-
-
-
-
 
 /*reloj*/
 .contenedoreloj{
@@ -11376,17 +11365,6 @@ to {
   text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff21f, 0 0 60px #00fff21f, 0 0 70px #00fff21f, 0 0 80px #00fff200, 0 1 90px #00fff200, 0 1 90px #00fff200;
 }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* Estilos para la clase rowcontentcenter */
 .rowcontentcenter {
@@ -11539,15 +11517,6 @@ to {
   font-weight: bold;
 }
 
-
-
-
-
-
-
-
-
-
 /*anuncios*/
 .contenedoranuncios{
   padding: 0;
@@ -11564,8 +11533,7 @@ to {
   font-weight: bold;
   font-size: 8vh;
 }
-.informacion_de_la_pagina{
-  width: 100%;
+.informacion{
   padding: 40px;
 }
 .subcontenedoresanuncios{
