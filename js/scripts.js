@@ -35,7 +35,7 @@ window.onload = function () {
     });
   
     const textElement = document.querySelector(".loader"); // Selecciona el elemento h3
-    const words = ["PAGINAS WEB","APLICACIONES WEB", "BOTS PARA DISCORD", "APPS DE ESCRITORIO"]; // Palabras a escribir
+    const words = ["PAGINAS WEB", "APPS DE ESCRITORIO", "APPS DE CONSOLA"]; // Palabras a escribir
     let wordIndex = 0;
     let letterIndex = 0;
     let isTyping = true;
