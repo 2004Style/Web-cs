@@ -24,7 +24,11 @@ este es el codigo para crear las tarjetas donde van los productos
                         </div>
                         <!-- Product actions-->
                         <div class="cardfooter">
-                            <div class="textcenter"><a class="btns" href="aca va la direccion de donde esta el producto en los archivos">Descargar</a></div>
+                            <div class="textcenter">
+                                <a class="btns" href="aca va la direccion de donde esta el producto en los archivos">
+                                    <div class="sb-nav-link-icon"><i class="fa-solid fa-download"></i> Descargar</div>
+                                </a>
+                            </div>
                         </div>
                     </div>
 

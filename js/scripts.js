@@ -35,7 +35,7 @@ window.onload = function () {
     });
   
     const textElement = document.querySelector(".loader"); // Selecciona el elemento h3
-    const words = ["PAGINAS WEB","APLICACIONES WEB", "BOTS PARA DISCORD", "APPS DE ESCRITORIO"]; // Palabras a escribir
+    const words = ["PAGINAS WEB", "APPS DE ESCRITORIO", "APPS DE CONSOLA"]; // Palabras a escribir
     let wordIndex = 0;
     let letterIndex = 0;
     let isTyping = true;
@@ -65,3 +65,68 @@ window.onload = function () {
   };
 
   
+//automatizacion de la marca para colocar el copiryng y tambien para modificar la marca en todos lados desde aca
+// Función para obtener el año actual
+function getCurrentYear() {
+  return new Date().getFullYear();
+}
+
+// Variables
+var marca = "ConvertSystems";
+var year = getCurrentYear();
+
+var tiktok = "https://www.tiktok.com/@codecrafter_dev?_t=8f9FNxzEUx3&_r=1/";
+var instagram = "https://instagram.com/2004_style?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D/";
+var discord = "https://discord.gg/WmKp5A4nCS";
+//var facebook = ;
+//var whatsapp = ;
+//var tiwter = ;
+//var replit = ;
+
+// Obtén el elemento h1 con la clase "empresa"
+// Obtén los elementos de anclaje por su ID "copyright"
+var marcalista = document.getElementById("marca");
+var copyrightElement = document.getElementById("copyright");
+
+var enlaceTikTok = document.getElementById("enlaceTikTok");
+var enlaceInstagram = document.getElementById("enlaceInstagram");
+var enlaceDiscord = document.getElementById("enlaceDiscord");
+
+// Cambia el texto dentro del elemento
+marcalista.textContent = marca;
+copyrightElement.innerHTML = `Copyright &copy; ${marca} ${year}`;
+
+enlaceTikTok.href = tiktok;
+enlaceInstagram.href = instagram;
+enlaceDiscord.href = discord;
+
+//inicio
+var marca_inicio = document.getElementsByClassName("empresa");
+// Recorre todos los elementos y cambia su texto
+for (var i = 0; i < marca_inicio.length; i++) {
+  marca_inicio[i].textContent = marca;
+}
+
+//anuncios
+var texto_funcionamiento_producto = "VER EL FUNCIONAMIENTO";
+var elementos_anuncios = document.getElementsByClassName("titlePRODUCT");
+// Recorre todos los elementos y cambia su texto
+for (var i = 0; i < elementos_anuncios.length; i++) {
+  elementos_anuncios[i].textContent = texto_funcionamiento_producto;
+}
+
+//anuncios icono
+var img_logo = "https://cdn.discordapp.com/attachments/1144842385604489286/1144849384245309490/Picsart_23-08-11_10-55-11-884.jpg";
+var img_logo_fondo = document.getElementsByClassName("logo");
+// Recorre todos los elementos y cambia el atributo src
+for (var i = 0; i < img_logo_fondo.length; i++) {
+  img_logo_fondo[i].setAttribute("src", img_logo);
+}
+
+//productos para descargar
+var img_product = "https://cdn.discordapp.com/attachments/1144842385604489286/1144848920917332079/Untitled_Project.jpg";
+var img_product_fondo = document.getElementsByClassName("cardimg");
+// Recorre todos los elementos y cambia el atributo src
+for (var i = 0; i < img_product_fondo.length; i++) {
+  img_product_fondo[i].setAttribute("src", img_product);
+}
