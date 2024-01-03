@@ -30,4 +30,4 @@ var clock = new Vue({
     const hours = date.getHours();
     return hours >= 12 ? ' PM' : ' AM';
   }
-
+  
