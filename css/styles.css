@@ -11589,18 +11589,7 @@ to {
 .cuerpo{
   padding-top: 20px;
 }
-.galeria{
-  font-size: 15px;
-}
 
-.videoyt{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 20px;
-}
 .final{
   display: flex;
   padding: 20px;

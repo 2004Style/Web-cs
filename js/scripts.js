@@ -3,10 +3,6 @@ window.addEventListener('DOMContentLoaded', event => {
     // Toggle the side navigation
     const sidebarToggle = document.body.querySelector('#sidebarToggle');
     if (sidebarToggle) {
-        // Uncomment Below to persist sidebar toggle between refreshes
-        // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
-        //     document.body.classList.toggle('sb-sidenav-toggled');
-        // }
         sidebarToggle.addEventListener('click', event => {
             event.preventDefault();
             document.body.classList.toggle('sb-sidenav-toggled');
@@ -78,7 +74,7 @@ var year = getCurrentYear();
 var tiktok = "https://www.tiktok.com/@codecrafter_dev?_t=8f9FNxzEUx3&_r=1/";
 var instagram = "https://instagram.com/2004_style?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D/";
 var discord = "https://discord.gg/WmKp5A4nCS";
-//var facebook = ;
+var facebook = "https://www.facebook.com/profile.php?id=100038997457332&mibextid=ZbWKwL";
 //var whatsapp = ;
 //var tiwter = ;
 //var replit = ;
@@ -91,6 +87,7 @@ var copyrightElement = document.getElementById("copyright");
 var enlaceTikTok = document.getElementById("enlaceTikTok");
 var enlaceInstagram = document.getElementById("enlaceInstagram");
 var enlaceDiscord = document.getElementById("enlaceDiscord");
+var enlaceFaceboock = document.getElementById("enlaceFaceboock")
 
 // Cambia el texto dentro del elemento
 marcalista.textContent = marca;
@@ -99,6 +96,7 @@ copyrightElement.innerHTML = `Copyright &copy; ${marca} ${year}`;
 enlaceTikTok.href = tiktok;
 enlaceInstagram.href = instagram;
 enlaceDiscord.href = discord;
+enlaceFaceboock.href = facebook;
 
 //inicio
 var marca_inicio = document.getElementsByClassName("empresa");
