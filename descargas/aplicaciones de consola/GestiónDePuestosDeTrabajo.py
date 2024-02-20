@@ -12,8 +12,14 @@ class PuestoDeTrabajo:
         sueldo = float(input("Ingrese el sueldo del puesto: "))
 
         for puesto in puestos:
-            if puesto.codigo == codigo or puesto.descripcion == descripcion or puesto.area_solicitante == area_solicitante:
-                print("\nYa existe un puesto con el mismo codigo, descripcion o area solicitante.")
+            if (
+                puesto.codigo == codigo
+                or puesto.descripcion == descripcion
+                or puesto.area_solicitante == area_solicitante
+            ):
+                print(
+                    "\nYa existe un puesto con el mismo codigo, descripcion o area solicitante."
+                )
                 return
 
         nuevo_puesto = PuestoDeTrabajo(codigo, descripcion, area_solicitante, sueldo)
@@ -28,7 +34,9 @@ class PuestoDeTrabajo:
 
             print("\nListado de Puestos de Trabajo:")
             for puesto in puestos:
-                print(f"Codigo: {puesto.codigo}, Descripcion: {puesto.descripcion}, Area Solicitante: {puesto.area_solicitante}, Sueldo: {puesto.sueldo}")
+                print(
+                    f"Codigo: {puesto.codigo}, Descripcion: {puesto.descripcion}, Area Solicitante: {puesto.area_solicitante}, Sueldo: {puesto.sueldo}"
+                )
 
     def borrar_puesto(self, puestos):
         codigo_a_borrar = int(input("Ingrese el codigo del puesto a borrar: "))
@@ -90,11 +98,14 @@ class PuestoDeTrabajo:
             print("\nPuestos contratados para cubrir el monto:")
             self.mostrar_todo(contratados)
         else:
-            print("\nNo se pudieron contratar puestos para cubrir el monto especificado.")
+            print(
+                "\nNo se pudieron contratar puestos para cubrir el monto especificado."
+            )
+
 
 def main():
     puestos = []
-    puesto = PuestoDeTrabajo(0, '', '', 0)
+    puesto = PuestoDeTrabajo(0, "", "", 0)
 
     while True:
         print("\n\t=============Menu=============")
@@ -121,6 +132,9 @@ def main():
         elif opcion == "5":
             puesto.lista_mas_valiosa(puestos)
         else:
-            print("\n\tPor favor ingrese una opcion valida!\n\tEjecutando menu nuevamente...\n")
+            print(
+                "\n\tPor favor ingrese una opcion valida!\n\tEjecutando menu nuevamente...\n"
+            )
+
 
 main()

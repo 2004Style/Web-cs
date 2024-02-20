@@ -1,66 +1,65 @@
-window.addEventListener('DOMContentLoaded', event => {
-
-    // Toggle the side navigation
-    const sidebarToggle = document.body.querySelector('#sidebarToggle');
-    if (sidebarToggle) {
-        sidebarToggle.addEventListener('click', event => {
-            event.preventDefault();
-            document.body.classList.toggle('sb-sidenav-toggled');
-            localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
-        });
-    }
-
+window.addEventListener("DOMContentLoaded", (event) => {
+  // Toggle the side navigation
+  const sidebarToggle = document.body.querySelector("#sidebarToggle");
+  if (sidebarToggle) {
+    sidebarToggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      document.body.classList.toggle("sb-sidenav-toggled");
+      localStorage.setItem(
+        "sb|sidebar-toggle",
+        document.body.classList.contains("sb-sidenav-toggled")
+      );
+    });
+  }
 });
 
-
 window.onload = function () {
-    Particles.init({
-      selector: ".background",
-      color: ["#00C4FF", "#00C4FF", "#000000"],
-      connectParticles: true,
-      responsive: [
-        {
-          breakpoint: 768,
-          options: {
-            color: ["#00C4FF", "#00C4FF", "#00C4FF"],
-            maxParticles: 43,
-            connectParticles: false
-          }
-        }
-      ]
-    });
-  
-    const textElement = document.querySelector(".loader"); // Selecciona el elemento h3
-    const words = ["PAGINAS WEB", "APPS DE ESCRITORIO", "APPS DE CONSOLA"]; // Palabras a escribir
-    let wordIndex = 0;
-    let letterIndex = 0;
-    let isTyping = true;
-  
-    function typeText() {
-      if (isTyping) {
-        textElement.textContent += words[wordIndex][letterIndex];
-        letterIndex++;
-        if (letterIndex >= words[wordIndex].length) {
-          isTyping = false;
-          setTimeout(typeText, 1000); // Espera antes de borrar
-        } else {
-          setTimeout(typeText, 150); // Velocidad de escritura
-        }
-      } else {
-        textElement.textContent = textElement.textContent.slice(0, -1);
-        if (textElement.textContent.length === 0) {
-          isTyping = true;
-          letterIndex = 0;
-          wordIndex = (wordIndex + 1) % words.length; // Cambia a la siguiente palabra
-        }
-        setTimeout(typeText, 90); // Velocidad de borrado
-      }
-    }
-  
-    typeText(); // Comienza el proceso
-  };
+  Particles.init({
+    selector: ".background",
+    color: ["#00C4FF", "#00C4FF", "#000000"],
+    connectParticles: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        options: {
+          color: ["#00C4FF", "#00C4FF", "#00C4FF"],
+          maxParticles: 43,
+          connectParticles: false,
+        },
+      },
+    ],
+  });
 
-  
+  const textElement = document.querySelector(".loader"); // Selecciona el elemento h3
+  const words = ["PAGINAS WEB", "APPS DE ESCRITORIO", "APPS DE CONSOLA"]; // Palabras a escribir
+  let wordIndex = 0;
+  let letterIndex = 0;
+  let isTyping = true;
+
+  function typeText() {
+    if (isTyping) {
+      textElement.textContent += words[wordIndex][letterIndex];
+      letterIndex++;
+      if (letterIndex >= words[wordIndex].length) {
+        isTyping = false;
+        setTimeout(typeText, 1000); // Espera antes de borrar
+      } else {
+        setTimeout(typeText, 150); // Velocidad de escritura
+      }
+    } else {
+      textElement.textContent = textElement.textContent.slice(0, -1);
+      if (textElement.textContent.length === 0) {
+        isTyping = true;
+        letterIndex = 0;
+        wordIndex = (wordIndex + 1) % words.length; // Cambia a la siguiente palabra
+      }
+      setTimeout(typeText, 90); // Velocidad de borrado
+    }
+  }
+
+  typeText(); // Comienza el proceso
+};
+
 //automatizacion de la marca para colocar el copiryng y tambien para modificar la marca en todos lados desde aca
 // Función para obtener el año actual
 function getCurrentYear() {
@@ -72,9 +71,11 @@ var marca = "ConvertSystems";
 var year = getCurrentYear();
 
 var tiktok = "https://www.tiktok.com/@codecrafter_dev?_t=8f9FNxzEUx3&_r=1/";
-var instagram = "https://instagram.com/2004_style?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D/";
+var instagram =
+  "https://instagram.com/2004_style?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D/";
 var discord = "https://discord.gg/WmKp5A4nCS";
-var facebook = "https://www.facebook.com/profile.php?id=100038997457332&mibextid=ZbWKwL";
+var facebook =
+  "https://www.facebook.com/profile.php?id=100038997457332&mibextid=ZbWKwL";
 //var whatsapp = ;
 //var tiwter = ;
 //var replit = ;
@@ -87,7 +88,7 @@ var copyrightElement = document.getElementById("copyright");
 var enlaceTikTok = document.getElementById("enlaceTikTok");
 var enlaceInstagram = document.getElementById("enlaceInstagram");
 var enlaceDiscord = document.getElementById("enlaceDiscord");
-var enlaceFaceboock = document.getElementById("enlaceFaceboock")
+var enlaceFaceboock = document.getElementById("enlaceFaceboock");
 
 // Cambia el texto dentro del elemento
 marcalista.textContent = marca;
@@ -114,7 +115,8 @@ for (var i = 0; i < elementos_anuncios.length; i++) {
 }
 
 //anuncios icono
-var img_logo = "https://cdn.discordapp.com/attachments/1144842385604489286/1144849384245309490/Picsart_23-08-11_10-55-11-884.jpg";
+var img_logo =
+  "https://cdn.discordapp.com/attachments/1144842385604489286/1144849384245309490/Picsart_23-08-11_10-55-11-884.jpg";
 var img_logo_fondo = document.getElementsByClassName("logo");
 // Recorre todos los elementos y cambia el atributo src
 for (var i = 0; i < img_logo_fondo.length; i++) {
@@ -122,7 +124,8 @@ for (var i = 0; i < img_logo_fondo.length; i++) {
 }
 
 //productos para descargar
-var img_product = "https://cdn.discordapp.com/attachments/1144842385604489286/1144848920917332079/Untitled_Project.jpg";
+var img_product =
+  "https://cdn.discordapp.com/attachments/1144842385604489286/1144848920917332079/Untitled_Project.jpg";
 var img_product_fondo = document.getElementsByClassName("cardimg");
 // Recorre todos los elementos y cambia el atributo src
 for (var i = 0; i < img_product_fondo.length; i++) {
