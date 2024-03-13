@@ -13877,3 +13877,23 @@ p {
   color: var(--colordecarta--);
   /* Color deseado */
 }
+
+/*brillo parpadeante*/
+.brillo-parpadeante {
+            animation: glow-text 1s ease-in-out infinite alternate;
+        }
+
+        /* Animación */
+        @keyframes glow-text {
+            0% {
+                color: #339933;
+                text-shadow: 0 0 5px rgba(0, 255, 0, .2),
+                    0 0 5px rgba(0, 0, 0, .1);
+            }
+
+            100% {
+                color: #6f6;
+                text-shadow: 0 0 20px rgba(0, 255, 0, .6),
+                    0 0 10px rgba(0, 255, 0, .4);
+            }
+        }
