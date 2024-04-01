@@ -115,8 +115,7 @@ for (var i = 0; i < elementos_anuncios.length; i++) {
 }
 
 //anuncios icono
-var img_logo =
-  "https://cdn.discordapp.com/attachments/1144842385604489286/1144849384245309490/Picsart_23-08-11_10-55-11-884.jpg";
+var img_logo = "./imagenes/logo_convertsystemsfondoblanco-01.jpg";
 var img_logo_fondo = document.getElementsByClassName("logo");
 // Recorre todos los elementos y cambia el atributo src
 for (var i = 0; i < img_logo_fondo.length; i++) {
@@ -124,8 +123,7 @@ for (var i = 0; i < img_logo_fondo.length; i++) {
 }
 
 //productos para descargar
-var img_product =
-  "https://cdn.discordapp.com/attachments/1144842385604489286/1144848920917332079/Untitled_Project.jpg";
+var img_product = "./imagenes/logo.jpg";
 var img_product_fondo = document.getElementsByClassName("cardimg");
 // Recorre todos los elementos y cambia el atributo src
 for (var i = 0; i < img_product_fondo.length; i++) {
