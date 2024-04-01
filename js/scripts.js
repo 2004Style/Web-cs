@@ -16,13 +16,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
 window.onload = function () {
   Particles.init({
     selector: ".background",
-    color: ["#00C4FF", "#00C4FF", "#000000"],
+    color: ["#00fc37", "#00fc37", "#000000"],
     connectParticles: true,
     responsive: [
       {
         breakpoint: 768,
         options: {
-          color: ["#00C4FF", "#00C4FF", "#00C4FF"],
+          color: ["#00fc37", "#00fc37", "#00fc37"],
           maxParticles: 43,
           connectParticles: false,
         },
