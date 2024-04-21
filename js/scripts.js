@@ -129,3 +129,166 @@ var img_product_fondo = document.getElementsByClassName("cardimg");
 for (var i = 0; i < img_product_fondo.length; i++) {
   img_product_fondo[i].setAttribute("src", img_product);
 }
+
+
+//calculadora
+// Agrega un evento de escucha al campo de entrada (input)
+        document.getElementById("number").addEventListener("keyup", function (event) {
+            // Verifica si la tecla presionada es "Enter"
+            if (event.key === "Enter") {
+                // Llama a la función convertir() si se presiona "Enter"
+                convertir();
+            }
+        });
+        function convertir() {
+            var numero = parseInt(document.getElementById("number").value);
+
+            // Formato de enteros sin signo
+            var enterossinsigno = "";
+
+            // variable para almacenar el numero decimal
+            var absNumero = Math.abs(numero);
+            if (numero >= 0) {
+                if (numero <= 255) {
+                    var binario8 = numero.toString(2).padStart(8, '0');
+                    enterossinsigno += "Binario (8 bits): " + binario8 + "<br>";
+                }
+                if (numero <= 65535) {
+                    var binario16 = numero.toString(2).padStart(16, '0');
+                    enterossinsigno += "Binario (16 bits): " + binario16 + "<br>";
+                }
+                if (numero <= 4294967295) {
+                    var binario32 = numero.toString(2).padStart(32, '0');
+                    enterossinsigno += "Binario (32 bits): " + binario32 + "<br>";
+                }
+                document.getElementById("h4enterossinsigno").innerHTML = "<h4>Formato de enteros sin signo ( decimal = " + absNumero + " )</h4>";
+                document.getElementById("enterossinsigno").innerHTML = enterossinsigno;
+            } else {
+                if (absNumero <= 255) {
+                    var binario8 = absNumero.toString(2).padStart(8, '0');
+                    enterossinsigno += "Binario (8 bits): " + binario8 + "<br>";
+                }
+                if (absNumero <= 65535) {
+                    var binario16 = absNumero.toString(2).padStart(16, '0');
+                    enterossinsigno += "Binario (16 bits): " + binario16 + "<br>";
+                }
+                if (absNumero <= 4294967295) {
+                    var binario32 = absNumero.toString(2).padStart(32, '0');
+                    enterossinsigno += "Binario (32 bits): " + binario32 + "<br>";
+                }
+                document.getElementById("h4enterossinsigno").innerHTML = "<h4>Formato de enteros sin signo ( decimal = " + absNumero + " )</h4>";
+                document.getElementById("enterossinsigno").innerHTML = enterossinsigno;
+            }
+
+
+            // Formato signo y magnitud
+            var signoymagnitud = "";
+            if (numero >= -127 && numero <= 127) {
+                signoymagnitud += "Binario (8 bits): " + ((numero < 0) ? "1" : "0") + Math.abs(numero).toString(2).padStart(7, '0') + "<br>";
+            }
+            if (numero >= -32767 && numero <= 32767) {
+                signoymagnitud += "Binario (16 bits): " + ((numero < 0) ? "1" : "0") + Math.abs(numero).toString(2).padStart(15, '0') + "<br>";
+            }
+            if (numero >= -2147483647 && numero <= 2147483647) {
+                signoymagnitud += "Binario (32 bits): " + ((numero < 0) ? "1" : "0") + Math.abs(numero).toString(2).padStart(31, '0') + "<br>";
+            }
+            if (numero < -2147483647 || numero > 2147483647) {
+                signoymagnitud += "Desbordamiento: El número ingresado está fuera del rango permitido para el formato signo y magnitud.<br>";
+            }
+            document.getElementById("signoymagnitud").innerHTML = signoymagnitud;
+
+            // Formato de complemento a 1
+            var cde1 = "";
+            var binarioComplemento1 = '';
+            if (numero >= -127 && numero <= 127) {
+                if (numero < 0) {
+                    // Convertir a binario ignorando el signo
+                    var binario = Math.abs(numero).toString(2).padStart(8, '0');
+                    // Complemento a uno
+                    binarioComplemento1 = binario.split('').map(bit => (bit === '0' ? '1' : '0')).join('');
+                } else {
+                    binarioComplemento1 = binario8;
+                }
+                cde1 += "Binario (8 bits): " + binarioComplemento1 + "<br>";
+            }
+            if (numero >= -32767 && numero <= 32767) {
+                if (numero < 0) {
+                    var binario = Math.abs(numero).toString(2).padStart(16, '0');
+                    binarioComplemento1 = binario.split('').map(bit => (bit === '0' ? '1' : '0')).join('');
+                } else {
+                    binarioComplemento1 = binario16;
+                }
+                cde1 += "Binario (16 bits): " + binarioComplemento1 + "<br>";
+            }
+            if (numero >= -2147483647 && numero <= 2147483647) {
+                if (numero < 0) {
+                    var binario = Math.abs(numero).toString(2).padStart(32, '0');
+                    binarioComplemento1 = binario.split('').map(bit => (bit === '0' ? '1' : '0')).join('');
+                } else {
+                    binarioComplemento1 = binario32;
+                }
+                cde1 += "Binario (32 bits): " + binarioComplemento1 + "<br>";
+            }
+            if (numero < -2147483647 || numero > 2147483647) {
+                cde1 += "Desbordamiento: El número ingresado está fuera del rango permitido para el formato de complemento a uno.<br>";
+            }
+            document.getElementById("cde1").innerHTML = cde1;
+
+            // Formato de complemento a 2
+            var cd2 = "";
+            var binarioComplemento2 = '';
+            if (numero >= -127 && numero <= 127) {
+                if (numero < 0) {
+                    // Convertir a binario ignorando el signo
+                    var binario = Math.abs(numero).toString(2).padStart(8, '0');
+                    // Complemento a dos
+                    var complemento1 = binario.split('').map(bit => (bit === '0' ? '1' : '0')).join('');
+                    var complemento2 = (parseInt(complemento1, 2) + 1).toString(2).padStart(8, '0');
+                    binarioComplemento2 = complemento2;
+                } else {
+                    binarioComplemento2 = binario8;
+                }
+                cd2 += "Binario (8 bits): " + binarioComplemento2 + "<br>";
+            }
+            if (numero >= -32767 && numero <= 32767) {
+                if (numero < 0) {
+                    var binario = Math.abs(numero).toString(2).padStart(16, '0');
+                    var complemento1 = binario.split('').map(bit => (bit === '0' ? '1' : '0')).join('');
+                    var complemento2 = (parseInt(complemento1, 2) + 1).toString(2).padStart(16, '0');
+                    binarioComplemento2 = complemento2;
+                } else {
+                    binarioComplemento2 = binario16;
+                }
+                cd2 += "Binario (16 bits): " + binarioComplemento2 + "<br>";
+            }
+            if (numero >= -2147483647 && numero <= 2147483647) {
+                if (numero < 0) {
+                    var binario = Math.abs(numero).toString(2).padStart(32, '0');
+                    var complemento1 = binario.split('').map(bit => (bit === '0' ? '1' : '0')).join('');
+                    var complemento2 = (BigInt('0b' + complemento1) + BigInt(1)).toString(2).padStart(32, '0');
+                    binarioComplemento2 = complemento2;
+                } else {
+                    binarioComplemento2 = binario32;
+                }
+                cd2 += "Binario (32 bits): " + binarioComplemento2 + "<br>";
+            }
+            if (numero < -2147483647 || numero > 2147483647) {
+                cd2 += "Desbordamiento: El número ingresado está fuera del rango permitido para el formato de complemento a dos.<br>";
+            }
+            document.getElementById("cd2").innerHTML = cd2;
+            //hexadecimal y octal
+
+            if (numero >= 0) {
+                // Decimal a Hexadecimal
+                var hexadecimal = (parseInt(numero, 10)).toString(16).toUpperCase();
+
+                // Decimal a Octal
+                var octal = (parseInt(numero, 10)).toString(8);
+
+                document.getElementById("resultado").innerHTML = "Hexadecimal: " + hexadecimal + "<br>"
+                    + "Octal: " + octal;
+            }
+            else {
+                document.getElementById("resultado").innerHTML = "";
+            }
+        }

@@ -13897,3 +13897,51 @@ p {
                     0 0 10px rgba(0, 255, 0, .4);
             }
         }
+
+                .calculadoradeconversion {
+                  height: 100%;
+                  color: rgb(255, 255, 255);
+                }
+        
+                .controlscalculator {
+                  font-size: 3vh;
+                  padding: 2.5vh;
+                }
+        
+                .containerbinarios {
+                  display: flex;
+                  margin: 0;
+                  padding: 0;
+                }
+        
+                .enteros-sin-signo,
+                .formato-sigo-y-magnitud,
+                .formato-complemento-a-1,
+                .formato-complento-a-2 {
+                  height: 30vh;
+                  width: 50%;
+                }
+        
+                .hexadecimal-octal {
+                  display: flex;
+                  justify-content: center;
+                  height: 22vh;
+                  text-align: center;
+                }
+        
+                .contenido {
+                  display: flex;
+                  flex-direction: column;
+                  height: 100%;
+                  /* Centrar los elementos en una columna */
+                }
+        
+                .enteros-sin-signo,
+                .formato-sigo-y-magnitud,
+                .formato-complemento-a-1,
+                .formato-complento-a-2,
+                .hexadecimal-octal {
+                  padding: 0vh 0vh 0vh 3vh;
+                  border: 1px solid rgb(255, 255, 255);
+                  /* Agrega un borde de 1px de grosor */
+                }
