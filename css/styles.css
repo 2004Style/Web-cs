@@ -13920,6 +13920,7 @@ p {
                 .formato-complento-a-2 {
                   height: 30vh;
                   width: 50%;
+                  overflow: auto;
                 }
         
                 .hexadecimal-octal {
